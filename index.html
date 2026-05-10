@@ -1292,6 +1292,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        transform: scale(1.1);
+        transform-origin: top center;
       }
       .search-strip {
         width: calc(100% - 24px);
@@ -1351,11 +1353,33 @@
       .hero-actions, .hero-stats {
         justify-content: center;
       }
+      .hero-stats {
+        flex-wrap: nowrap;
+        gap: 10px;
+        width: 100%;
+        padding: 0 10px;
+      }
+      .hero-stat {
+        flex: 1;
+        padding: 10px 5px;
+        min-width: 0;
+      }
+      .hero-stat strong {
+        font-size: 18px;
+      }
+      .hero-stat span {
+        font-size: 9px;
+      }
       .card {
         text-align: center;
+        border-radius: 4px; /* More square */
       }
       .card .icon-box, .card .mini-image {
-        margin: 0 auto 20px;
+        display: none; /* Remove icons/mini-images on mobile as requested */
+      }
+      .card img {
+        height: 220px;
+        object-fit: cover;
       }
       .grid-4, .grid-3, .property-grid, .areas-grid, .service-grid, .testimonials, .footer-grid, .form-row, .confidence-stats {
         grid-template-columns: 1fr;
